@@ -1,7 +1,6 @@
 
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:yor_xiu_common/config/top_level_obj.dart';
-import 'package:yor_xiu_common/utils/token_helper.dart';
 
 ///封装sp
 ///
@@ -23,7 +22,6 @@ class SPUtil{
 
   Future<void> init()async{
     prefs ??= await SharedPreferences.getInstance();
-    TokenHelper.token = getString('token');
     logger.i('初始化sp');
   }
 
